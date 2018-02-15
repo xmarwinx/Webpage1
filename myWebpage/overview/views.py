@@ -11,7 +11,7 @@ import json
 
  #   return render(request, 'overview/index.html', context)
 
-#test
+# test
 
 def overview(request):
     #latest_question_list = ["a", "b", "c", "d"]
@@ -21,7 +21,7 @@ def overview(request):
 
     #return HttpResponse("hallo")
 
-    with open("/home/marwin/Desktop/test3.json") as json_data:
+    with open("/home/marwin/Desktop/test5.json") as json_data:
         d = json.load(json_data)
         aString = ""
         #print(d)
@@ -29,14 +29,15 @@ def overview(request):
         #print(d[1]["adress"])
 
         for i, x in enumerate(d, start=1):
-            aString = (aString +
-                      "<h2>Entry %s:</h2>" % i +
-                      "<b>Title: </b>" + x["title"] + "</p></p>" +
-                      "<b>Adress: </b>" + x["adress"] + "</p></p>" +
-                      "<b>Date: </b>" + x["date"] + "</p></p>" +
-                      "<b>Description: </b>" + x["description"] + "</p></p>" +
-                      "<b>ImageURL: </b>" + x["image"] +  "</p></p>" +
-                      "<b>ImageLinkTest: </b>" + '<a href="%s">This is the Link</a>' % x["image"]
+            aString = (aString
+                       + "<h2>Entry %s:</h2>" % i
+                       + "<b>Title: </b>" + x["title"] + "</p></p>"
+                       + "<b>Title-Link-Test: </b>" + '<a href="%s">%s</a>' % (x["title-link"], x["title-link"]) + "</p></p>"
+                       + "<b>Adress: </b>" + x["adress"] + "</p></p>"
+                       + "<b>Date: </b>" + x["date"] + "</p></p>"
+                       + "<b>Description: </b>" + x["description"] + "</p></p>"
+                       + "<b>Small_ImageURL: </b>" + x["image"] +  "</p></p>"
+                       + "<b>Small_ImageLinkTest: </b>" + '<a href="%s">This is the Link</a>' % x["image"]
                        )
 
 
