@@ -33,7 +33,7 @@ def overview(request):
                        + "<h2>Entry %s:</h2>" % i
                        + "<b>Title: </b>" + x["title"] + "</p></p>"
                        + "<b>Title-Link-Test: </b>" + '<a href="%s">%s</a>' % (x["title-link"], x["title-link"]) + "</p></p>"
-                       + "<b>Adress: </b>" + x["adress"] + "</p></p>"
+                       + "<b>Address: </b>" + x["adress"] + "</p></p>"
                        + "<b>Date: </b>" + x["date"] + "</p></p>"
                        + "<b>Description: </b>" + x["description"] + "</p></p>"
                        + "<b>Small_ImageURL: </b>" + x["image"] +  "</p></p>"
